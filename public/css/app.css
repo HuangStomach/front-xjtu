@@ -1,0 +1,46 @@
+body {
+    padding-top: 50px;
+    background-color: #EEEEEE;
+}
+
+.navbar, .navbar.navbar-default {
+    background-color: #FFFFFF;
+}
+
+.navbar .navbar-nav > li > a,
+.navbar .navbar-brand {
+    color: #111111;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar .navbar-brand {
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.carousel-inner {
+    background-color: #BBBBBB
+}
+
+.carousel-inner > .item {
+    height: 300px;
+}
+
+.carousel-indicators li {
+    background-color: #FFFFFF
+}
+
+.carousel-indicators .active {
+    border-color: blue;
+    background-color: blue;
+}
+
+.pie-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
