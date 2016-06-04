@@ -43,4 +43,23 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    max-width: 100px;
+}
+
+.pie-content i {
+    font-size: 12px;
+}
+
+.pie-content .media-heading {
+    margin-bottom: 0px;
+}
+
+.pie-content h1,h2,h3,h4,h5,h6 {
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.media {
+    margin-top: 0px;
 }

@@ -11,4 +11,9 @@
 |
 */
 
-Route::get('/', 'HomeController@getIndex');
+Route::get('/', 'HomeController@index');
+
+Route::group(['prefix' => 'ajax', 'namespace' => 'Ajax'], function () {
+    Route::get('home/eqStatus', 'HomeController@eqStatus');
+    Route::get('home/eqRate', 'HomeController@eqRate');
+});
