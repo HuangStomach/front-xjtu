@@ -7,4 +7,10 @@
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+<script src="{{ URL::asset('js/material.min.js') }}" charset="utf-8"></script>
+<script src="{{ URL::asset('js/ripples.min.js') }}" charset="utf-8"></script>
 <script src="{{ URL::asset('js/d3.v3.min.js') }}" charset="utf-8"></script>
+
+<script>
+$.material.init();
+</script>

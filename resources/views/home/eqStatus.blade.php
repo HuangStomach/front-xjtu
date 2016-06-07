@@ -47,7 +47,7 @@
 
 <script>
 var width = 200,
-    height = 200,
+    height = 220,
     radius = Math.min(width, height) / 2;
 
 var arc = d3.svg.arc()
@@ -55,12 +55,6 @@ var arc = d3.svg.arc()
     .outerRadius(radius - 10)
     .innerRadius(radius - 30)
     .cornerRadius(100);
-
-var pie = d3.layout.pie()
-    .sort(null)
-    .value(function(d) { 
-        return d.population; 
-    });
 
 var svg = d3.select("#eqStatus").append("svg")
     .attr("width", width)
@@ -89,13 +83,13 @@ linear.append('stop')
 var meter = svg.append("g");
 meter.append('path').attr('fill', '#EEEEEE').attr('d', arc.endAngle(2 * Math.PI));
 
-    var g = svg
-        .append("g")
-        .attr("class", "arc");
+var g = svg
+    .append("g")
+    .attr("class", "arc");
 
-    g.append("path")
-        .attr("d", arc.endAngle((2 * Math.PI) * 0.7))
-        .style("fill", 'url(#bala)');
+g.append("path")
+    .attr("d", arc.endAngle((2 * Math.PI) * 0.7))
+    .style("fill", 'url(#bala)');
 
 function type(d) {
     d.population = +d.population;

@@ -17,4 +17,20 @@ class HomeController extends Controller
         return view('home/eqRate');
     }
 
+    public function labStatus() {
+        return view('home/labStatus');
+    }
+
+    public function userStatus() {
+        return view('home/userStatus');
+    }
+
+    public function ranking() {
+        return view('home/ranking');
+    }
+    
+    public function newReserve() {
+        return view('home/newReserve');
+    }
+
 }
