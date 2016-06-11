@@ -21,6 +21,12 @@ Route::get('user/update/{id}', 'Admin\UserController@update');
 Route::post('user/update', 'Admin\UserController@postUpdate');
 
 Route::get('image/add', 'Admin\ImageController@add');
+Route::post('image/add', 'Admin\ImageController@postAdd');
+Route::post('image/delete', 'Admin\ImageController@postDelete');
+
+Route::get('link/add', 'Admin\LinkController@add');
+Route::post('link/add', 'Admin\LinkController@postAdd');
+Route::post('link/delete', 'Admin\LinkController@postDelete');
 
 Route::group(['prefix' => 'ajax', 'namespace' => 'Ajax'], function () {
     Route::get('home/eqStatus', 'HomeController@eqStatus');
@@ -30,12 +36,15 @@ Route::group(['prefix' => 'ajax', 'namespace' => 'Ajax'], function () {
     Route::get('home/ranking', 'HomeController@ranking');
     Route::get('home/newReserve', 'HomeController@newReserve');
 
+    Route::get('image/delete/{id}', 'ImageController@delete');
     Route::get('user/delete/{id}', 'UserController@delete');
+    Route::get('link/delete/{id}', 'LinkController@delete');
 });
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('/', 'IndexController@user');
     Route::get('user', 'IndexController@user');
     Route::get('image', 'IndexController@image');
+    Route::get('link', 'IndexController@link');
 });
 

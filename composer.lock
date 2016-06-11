@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4552fe8abf67fe262bc632c5e90e438a",
-    "content-hash": "05fa0561ddb5c47c1008a8143fed72ea",
+    "hash": "6c563ff23a929adc2b80d6ca002a2df6",
+    "content-hash": "21f38308f626cc7b53c4fae328da94f8",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -562,6 +562,45 @@
                 "parser"
             ],
             "time": "2014-09-09 13:34:57"
+        },
+        {
+            "name": "fguillot/json-rpc",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fguillot/JsonRPC.git",
+                "reference": "b002320b10aa1eeb7aee83f7b703cd6a6e99ff78"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/fguillot/JsonRPC/b002320b10aa1eeb7aee83f7b703cd6a6e99ff78.zip",
+                "reference": "b002320b10aa1eeb7aee83f7b703cd6a6e99ff78",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JsonRPC": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frédéric Guillot"
+                }
+            ],
+            "description": "Simple Json-RPC client/server library that just works",
+            "homepage": "https://github.com/fguillot/JsonRPC",
+            "time": "2016-05-29 13:06:36"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -2182,6 +2221,56 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "datto/json-rpc",
+            "version": "4.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/datto/php-json-rpc.git",
+                "reference": "35b0d30979d229ae8991e60e260daa7407f781b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/datto/php-json-rpc/35b0d30979d229ae8991e60e260daa7407f781b4.zip",
+                "reference": "35b0d30979d229ae8991e60e260daa7407f781b4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Datto\\JsonRpc\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Spencer Mortensen",
+                    "email": "smortensen@datto.com",
+                    "homepage": "http://spencermortensen.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Fully unit-tested JSON-RPC 2.0 for PHP",
+            "homepage": "http://datto.com",
+            "keywords": [
+                "json",
+                "json-rpc",
+                "jsonrpc",
+                "php",
+                "php-json-rpc",
+                "rpc"
+            ],
+            "time": "2016-02-29 20:08:22"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "1.0.5",

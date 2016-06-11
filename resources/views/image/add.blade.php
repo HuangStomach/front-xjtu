@@ -18,40 +18,20 @@
                 </ul>
             </div>
             @endif
-            <form class="form-horizontal" method="post" action="{{ $action }}">
+            <form class="form-horizontal" method="post" action="{{ $action }}" enctype="multipart/form-data">
                 {!! csrf_field() !!}
                 <div class="form-group">
-                    <label for="inputToken" class="col-md-1 control-label">账号</label>
-                    <div class="col-md-5">
-                       <input value="{{ isset($user) ? $user->token : '' }}" 
-                        name="token" type="text" class="form-control" id="inputToken" placeholder="请输入账号"/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputName" class="col-md-1 control-label">姓名</label>
-                    <div class="col-md-5">
-                       <input value="{{ isset($user) ? $user->name : '' }}" 
-                        name="name" type="text" class="form-control" id="inputName" placeholder="请输入姓名"/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="input" class="col-md-1 control-label">密码</label>
-                    <div class="col-md-5">
-                       <input name="password" type="password" class="form-control" id="inputToken" placeholder="请输入密码"/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputToken" class="col-md-1 control-label">确认密码</label>
-                    <div class="col-md-5">
-                       <input name="confirm" type="password" class="form-control" id="inputToken" placeholder="请再次输入密码"/>
+                    <label for="inputFile" class="col-md-1 control-label">图片</label>
+                    <div class="col-md-11">
+                       <input name="carousel" type="file" class="form-control file" id="inputFile" />
                     </div>
                 </div>
                 @if (isset($user))
                 <input name=id type="hidden" value="{{ $user->id }}" />
                 @endif
                 <div class="form-group">
-                    <div class="col-md-12 col-md-offset-8">
-                        <a href="/admin/user" class="btn btn-raised btn-default">返回</a>
+                    <div class="col-md-12 col-md-offset-9">
+                        <a href="/admin/image" class="btn btn-raised btn-default">返回</a>
                         <button type="submit" class="btn btn-raised btn-success">提交</button>
                     </div>
                 </div>
@@ -59,5 +39,11 @@
         </div>
     </div>
 </div>
+<script>
+$('#inputFile').fileinput({
+    language: 'zh',
+    showUpload: false,
+    allowedFileExtensions : ['jpg', 'jpeg', 'png', 'gif', 'bmp']
+});
 </script>
 @endsection

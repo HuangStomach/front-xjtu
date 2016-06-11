@@ -1,11 +1,11 @@
 <div class="text-center" id="userStatus" style="position: relative;">
     <div class="pie-content">
-       <h1>3000</h1>
+       <h1>{{ $user['total'] }}</h1>
         总人数
     </div>
 </div>
 <div class="center-block" style="margin-top: 20px;">
-校外用户100人，校内用户数2000人，设备管理员数量12人。
+校外用户{{ $user['inner'] }}人，校内用户数{{ $user['outer'] }}人，设备管理员数量{{ $user['incharge'] }}人。
 <div>
 
 <script>
@@ -61,17 +61,17 @@ $.each(fields(), function (index, item) {
         .attr("class", "arc");
 
     front.append("path")
-        .attr("d", arc.endAngle((3 * item.index + start) * Math.PI))
+        .attr("d", arc.endAngle((2 * item.index + start) * Math.PI))
         .style("fill", "url(#userStatus-" + index + ")");
 })
 
 function fields() {
   var now = new Date;
   return [
-    {index: .2},
-    {index: .3},
-    {index: .2},
-    {index: .3},
+    {index: {{ $inner }}},
+    {index: {{ $outer }}},
+    {index: {{ $incharge }}},
+    {index: {{ $admin }}},
   ];
 }
 </script>

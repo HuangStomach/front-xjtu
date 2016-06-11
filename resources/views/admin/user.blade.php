@@ -18,7 +18,7 @@
                 {{ session('message') }}
             </div>
             @endif
-            <table class="table table-hover table-striped">
+            <table class="table table-hover table-striped" style="margin-top: 20px;">
                 <thead>
                     <tr>
                         <th width="80">序号</th>

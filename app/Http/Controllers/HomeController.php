@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Image;
+use App\Link;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
@@ -24,6 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $images = Image::all();
+        $navs = Link::where('type', 1)->get();
+        return view('home', [
+            'navs' => $navs,
+            'images' => $images,
+        ]);
     }
 }

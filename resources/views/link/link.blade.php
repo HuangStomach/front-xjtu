@@ -18,32 +18,35 @@
                 </ul>
             </div>
             @endif
-            <form class="form-horizontal" method="post" action="{{ $action }}">
+            <form class="form-horizontal" method="post" action="{{ URL::to($action) }}" enctype="multipart/form-data">
                 {!! csrf_field() !!}
                 <div class="form-group">
-                    <label for="inputToken" class="col-md-1 control-label">账号</label>
+                    <label for="inputTitle" class="col-md-1 control-label">标题</label>
                     <div class="col-md-5">
                        <input value="{{ isset($user) ? $user->token : '' }}" 
-                        name="token" type="text" class="form-control" id="inputToken" placeholder="请输入账号"/>
+                        name="title" type="text" class="form-control" id="inputTitle" placeholder="请输入标题"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputName" class="col-md-1 control-label">姓名</label>
+                    <label for="inputHref" class="col-md-1 control-label">地址</label>
                     <div class="col-md-5">
-                       <input value="{{ isset($user) ? $user->name : '' }}" 
-                        name="name" type="text" class="form-control" id="inputName" placeholder="请输入姓名"/>
+                       <input value="{{ isset($user) ? $user->name : 'http://' }}" 
+                        name="href" type="text" class="form-control" id="inputHref" placeholder="请输入地址"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="input" class="col-md-1 control-label">密码</label>
+                    <label for="inputType" class="col-md-1 control-label">类别</label>
                     <div class="col-md-5">
-                       <input name="password" type="password" class="form-control" id="inputToken" placeholder="请输入密码"/>
+                        <select id="inputType" name="type" class="form-control">
+                            <option value="1">顶部导航</option>
+                            <option value="2">底部连接</option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputToken" class="col-md-1 control-label">确认密码</label>
+                    <label for="inputFile" class="col-md-1 control-label">图标</label>
                     <div class="col-md-5">
-                       <input name="confirm" type="password" class="form-control" id="inputToken" placeholder="请再次输入密码"/>
+                       <input name="icon" type="file" class="form-control file" id="inputFile" />
                     </div>
                 </div>
                 @if (isset($user))
@@ -51,7 +54,7 @@
                 @endif
                 <div class="form-group">
                     <div class="col-md-12 col-md-offset-8">
-                        <a href="/admin/user" class="btn btn-raised btn-default">返回</a>
+                        <a href="/admin/link" class="btn btn-raised btn-default">返回</a>
                         <button type="submit" class="btn btn-raised btn-success">提交</button>
                     </div>
                 </div>
@@ -59,4 +62,12 @@
         </div>
     </div>
 </div>
+
+<script>
+$('#inputFile').fileinput({
+    language: 'zh',
+    showUpload: false,
+    allowedFileExtensions : ['jpg', 'jpeg', 'png', 'gif', 'bmp']
+});
+</script>
 @endsection

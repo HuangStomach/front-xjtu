@@ -1,9 +1,9 @@
 @extends('layout.layout')
 
 @section('body')
-    @include('nav')
+    @include('nav', ['navs' => $navs])
 
-    @include('carousel')
+    @include('carousel', ['images' => $images])
 
 <div class="container" style="width: 1000px;">
     <div class="row">

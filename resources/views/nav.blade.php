@@ -6,12 +6,11 @@
 		Brand
 	    </a>
 	</div>
-	<ul class="nav navbar-nav navbar-right">
-	    <li><a href="#">首页</a></li>
-	    <li><a href="#">信息平台</a></li>
-	    <li><a href="#">基金平台</a></li>
-	    <li><a href="#">绩效平台-教育部</a></li>
-	    <li><a href="#">绩效平台-科技部</a></li>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ URL::to('/') }}">首页</a></li>
+        @foreach ($navs as $nav)
+	    <li><a href="{{ $nav->href }}">{{ $nav->title }}</a></li>
+        @endforeach
 	</ul>
     </div>
 </nav>
