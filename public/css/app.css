@@ -63,3 +63,43 @@ body {
 .media {
     margin-top: 0px;
 }
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #30343e;
+    overflow-y: auto;
+}
+
+.sidebar li {
+    font-size: 18px;
+}
+
+.sidebar li i {
+    color: #EEE;
+    margin: 12px;
+}
+
+.sidebar > li > a:hover {
+    text-decoration: none;
+    background-color: #434750;
+}
+
+.sidebar .active {
+    pointer-events: none;
+    background-color: #eee;
+}
+
+.sidebar .active i {
+    color: #30343e;
+}
+
+.table-btn a {
+    margin: 0;
+    padding: 0 20;
+}

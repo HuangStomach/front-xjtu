@@ -5,13 +5,19 @@
 		<li data-target="#carousel-example-generic" data-slide-to="1"></li>
     </ol>
 
-	<!-- Wrapper for slides -->
-	<div class="carousel-inner" role="listbox">
-		<div class="item active">
-			<img src="..." alt="...">
-		</div>
-		<div class="item">
-			<img src="..." alt="...">
-		</div>
+    <!-- Wrapper for slides -->
+    <div class="row">
+        <div class="carousel-inner col-md-6" role="listbox">
+            <div class="item active">
+                <div class="col-md-6 text-right">
+                   <img src="http://img2.imgtn.bdimg.com/it/u=111621494,750762078&fm=21&gp=0.jpg" alt="...">
+                </div>
+            </div>
+            <div class="item">
+                <div class="col-md-6 text-right">
+                    <img src="http://img2.imgtn.bdimg.com/it/u=111621494,750762078&fm=21&gp=0.jpg" alt="...">
+                </div>
+            </div>
+        </div>
     </div>
 </div>
