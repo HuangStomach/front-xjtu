@@ -15,14 +15,44 @@ body {
     padding-bottom: 15px;
 }
 
+.navbar .navbar-nav > li > a:hover {
+    color: #333;
+}
+
 .navbar .navbar-brand {
     height: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.carousel-inner {
-    background-color: #BBBBBB
+.nav-tabs {
+    background: inherit;
+    border-bottom: none;
+}
+
+.nav-tabs > li > a,
+.nav-tabs > li > a:hover, 
+.nav-tabs > li > a:focus {
+    margin: 0 5px;
+    color: #333 !important;
+    padding: 5px 0px;
+}
+
+.nav-tabs > li.active > a {
+    color: #4264d8 !important;
+    border-bottom: 2px solid #4264d8 !important;
+}
+
+.btn-radius {
+    border-radius: 18px;
+}
+
+.btn.btn-raised.btn-info {
+    background-color: #4264d8;
+}
+
+.carousel-outer {
+    background-color: #BBBBBB;
 }
 
 .carousel-inner > .item {
@@ -36,6 +66,19 @@ body {
 .carousel-indicators .active {
     border-color: blue;
     background-color: blue;
+}
+
+.panel-login {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.pie-title {
+    color: #4264d8;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .pie-content {
@@ -103,3 +146,4 @@ body {
     margin: 0;
     padding: 0 20;
 }
+

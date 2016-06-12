@@ -1,6 +1,6 @@
 <div class="text-center" id="userStatus" style="position: relative;">
     <div class="pie-content">
-       <h1>{{ $user['total'] }}</h1>
+       <h1 style="color: #4863f3;">{{ $user['total'] }}</h1>
         总人数
     </div>
 </div>

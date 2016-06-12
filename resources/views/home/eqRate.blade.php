@@ -5,7 +5,7 @@
                 <i class="fa fa-circle" style="color: #EEEEEE" aria-hidden="true"></i>
             </div>
             <div class="media-body text-left">
-                <h4 class="media-headiang">共102台</h4>
+                <h4 class="media-headiang">共{{ $total }}台</h4>
             </div>
         </div>
         <div class="media">
@@ -13,7 +13,7 @@
                 <i class="fa fa-circle" style="color: #4863f3" aria-hidden="true"></i>
             </div>
             <div class="media-body text-left">
-                <h4 class="media-headiang">60在使用</h4>
+                <h4 class="media-headiang">{{ $using }}在使用</h4>
             </div>
         </div>
     </div>
@@ -71,7 +71,7 @@ var meter = svg.append("g")
 var g = svg.append("g").attr("class", "arc");
 
 g.append("path")
-    .attr("d", arc.endAngle((2.7 * Math.PI) * 0.7))
+    .attr("d", arc.endAngle((2.7 * Math.PI) * {{ $rate }}))
     .style("fill", 'url(#balaa)');
 
 function type(d) {

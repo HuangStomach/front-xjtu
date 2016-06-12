@@ -10,7 +10,7 @@
         <div class="col-md-4">
             <div class="panel panel-default">
 				<div class="panel-body" style="height:370px;">
-				    <p>仪器当前情况</p>
+			        <p class="pie-title">仪器当前情况</p>
                     <div data-get="home/eqStatus"></div>
                 </div>
 			</div>
@@ -18,7 +18,7 @@
         <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-body" style="height:370px;">
-                    <p>课题情况</p>
+                    <p class="pie-title">课题情况</p>
                     <div data-get="home/labStatus"></div>
 				</div>
             </div>
@@ -26,7 +26,7 @@
         <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-body" style="height:370px;">
-                    <p>人员情况</p>
+                    <p class="pie-title">人员情况</p>
                     <div data-get="home/userStatus"></div>
 				</div>
 			</div>
@@ -36,7 +36,7 @@
         <div class="col-md-4">
             <div class="panel panel-default">
 				<div class="panel-body" style="height:370px;">
-                    <p>仪器开机率</p>
+                    <p class="pie-title">仪器开机率</p>
                     <div data-get="home/eqRate"></div>
 				</div>
 			</div>
@@ -51,7 +51,7 @@
         <div class="col-md-4">
             <div class="panel panel-default">
 				<div class="panel-body" style="height:370px;">
-                    <p>最新预约用户</p>
+                    <p class="pie-title">最新预约用户</p>
                     <div data-get="home/newReserve"></div>
                 </div>
 			</div>
@@ -65,4 +65,7 @@ $("[data-get]").each(function (index, e) {
     })
 })
 </script>
+
+    @include('footer', ['links' => $links])
+
 @endsection

@@ -27,15 +27,33 @@ class HomeController extends Controller
     }
 
     public function eqStatus() {
-        return view('home/eqStatus');
+        $result = self::getRpc()->execute('equipment/getSummaryInfo', [1]);
+        return view('home/eqStatus', [
+            'rate' => round($result['controlCount'] / $result['totalCount'], 2),
+            'total' => $result['totalCount'],
+            'control' => $result['controlCount'],
+            'using' => $result['usingCount'],
+            'wait' => $result['unUsingCount'],
+            'down' => $result['outServiceCount'],
+        ]);
     }
  
     public function eqRate() {
-        return view('home/eqRate');
+        $result = self::getRpc()->execute('equipment/getSummaryInfo', [1]);
+        return view('home/eqRate', [
+            'rate' => round($result['usingCount'] / $result['totalCount'], 2),
+            'total' => $result['totalCount'],
+            'using' => $result['usingCount'],
+        ]);
     }
 
     public function labStatus() {
-        return view('home/labStatus');
+        $result = self::getRpc()->execute('xjtu/labStatus', [1]);
+        return view('home/labStatus', [
+            'project' => $result['project'],
+            'lab' => $result['lab'],
+            'test' => $result['test'],
+        ]);
     }
 
     public function userStatus() {
@@ -51,7 +69,13 @@ class HomeController extends Controller
     }
 
     public function ranking() {
-        return view('home/ranking');
+        $reservs = self::getRpc()->execute('xjtu/reservRank', [1]);
+        $uses = self::getRpc()->execute('xjtu/useRank', [1]);
+        error_log(print_r($uses, true));
+        return view('home/ranking', [
+            'reservs' => $reservs,
+            'uses' => $uses,
+        ]);
     }
     
     public function newReserve() {

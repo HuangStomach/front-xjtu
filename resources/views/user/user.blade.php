@@ -18,7 +18,7 @@
                 </ul>
             </div>
             @endif
-            <form class="form-horizontal" method="post" action="{{ $action }}">
+            <form class="form-horizontal" method="post" action="{{ URL::to($action) }}">
                 {!! csrf_field() !!}
                 <div class="form-group">
                     <label for="inputToken" class="col-md-1 control-label">账号</label>

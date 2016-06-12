@@ -9,7 +9,7 @@
             <h2>
                 图片轮播
                 <div class="pull-right">
-                    <a href="/image/add" class="btn btn-raised btn-success" style="margin: 0;">添加图片</a>
+                    <a href="{{ URL::to('image/add') }}" class="btn btn-raised btn-success" style="margin: 0;">添加图片</a>
                 </div>
             </h2>
             @if (session('message'))
@@ -27,7 +27,7 @@
                         </div>
                         <div class="panel-footer text-right">
                             <a data-get="image/delete/{{ $image->id }}" href="javascript:void(0)" 
-                            class="btn btn-danger" style="margin: 0;padding 5px;">删除</a>
+                            class="btn btn-danger" style="margin: 0;padding: 0 5px;">删除</a>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
 <script>
 $('#carousels').on('click', '[data-get]', function (e) {
     var me = $(this);
-    $.get('/ajax/' + me.data('get'), function (result) {
+    $.get('ajax/' + me.data('get'), function (result) {
         $('body').append(result);
     })
 })

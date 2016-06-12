@@ -9,7 +9,7 @@
             <h2>
                 用户管理
                 <div class="pull-right">
-                    <a href="/user/add" class="btn btn-raised btn-success" style="margin: 0;">添加用户</a>
+                    <a href="{{ URL::to('user/add') }}" class="btn btn-raised btn-success" style="margin: 0;">添加用户</a>
                 </div>
             </h2>
             @if (session('message'))
@@ -39,7 +39,7 @@
                         <td>{{ $user->updated_at }}</td>
                         <td class="table-btn text-right">
                             @if ($user->token != 'genee')
-                            <a href="/user/update/{{ $user->id }}" class="btn btn-info">修改</a>
+                            <a href="{{ URL::to('user/update/' . $user->id) }}" class="btn btn-info">修改</a>
                             <a data-get="user/delete/{{ $user-> id}}" href="javascript:void(0)" class="btn btn-danger">删除</a>
                             @endif
                         </td>
@@ -54,7 +54,7 @@
 <script>
 $('.table-responsive').on('click', '[data-get]', function (e) {
     var me = $(this);
-    $.get('/ajax/' + me.data('get'), function (result) {
+    $.get('ajax/' + me.data('get'), function (result) {
         $('body').append(result);
     })
 })

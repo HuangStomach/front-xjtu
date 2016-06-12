@@ -18,7 +18,7 @@
                 </ul>
             </div>
             @endif
-            <form class="form-horizontal" method="post" action="{{ $action }}" enctype="multipart/form-data">
+            <form class="form-horizontal" method="post" action="{{ URL::to($action) }}" enctype="multipart/form-data">
                 {!! csrf_field() !!}
                 <div class="form-group">
                     <label for="inputFile" class="col-md-1 control-label">图片</label>

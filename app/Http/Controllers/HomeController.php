@@ -28,8 +28,10 @@ class HomeController extends Controller
     {
         $images = Image::all();
         $navs = Link::where('type', 1)->get();
+        $links = Link::where('type', 2)->get();
         return view('home', [
             'navs' => $navs,
+            'links' => $links,
             'images' => $images,
         ]);
     }

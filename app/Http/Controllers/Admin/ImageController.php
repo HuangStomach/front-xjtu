@@ -14,7 +14,7 @@ class ImageController extends Controller
     public function add () {
         return view('image/add', [
             'title' => '图片轮播',
-            'action' => '/image/add',
+            'action' => 'image/add',
             'active' => 'image',
         ]);
     }

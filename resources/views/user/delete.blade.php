@@ -7,7 +7,7 @@
       </div>
       <div class="modal-body">
         <p>您确定要删除用户吗</p>
-        <form method="post" action="/user/delete" id="userForm">
+        <form method="post" action="{{ URL::to('user/delete') }}" id="userForm">
             {!! csrf_field() !!}
             <input type="hidden" name="id" value={{ $id }}></input>
         </form>

@@ -9,7 +9,7 @@
             <h2 style="margin-bottom: 20px;">
                 链接管理
                 <div class="pull-right">
-                    <a href="/link/add" class="btn btn-raised btn-success" style="margin: 0;">添加连接</a>
+                    <a href="{{ URL::to('link/add') }}" class="btn btn-raised btn-success" style="margin: 0;">添加连接</a>
                 </div>
             </h2>
             @if (session('message'))
@@ -67,7 +67,7 @@
 <script>
 $('#links').on('click', '[data-get]', function (e) {
     var me = $(this);
-    $.get('/ajax/' + me.data('get'), function (result) {
+    $.get('ajax/' + me.data('get'), function (result) {
         $('body').append(result);
     })
 })

@@ -5,7 +5,7 @@
                 <i class="fa fa-circle" style="color: #EEEEEE" aria-hidden="true"></i>
             </div>
             <div class="media-body text-left">
-                <h4 class="media-headiang">共102台</h4>
+                <h4 style="font-size: 16px;" class="media-headiang">共{{ $total }}台</h4>
             </div>
         </div>
         <div class="media">
@@ -13,7 +13,7 @@
                 <i class="fa fa-circle" style="color: #4863f3" aria-hidden="true"></i>
             </div>
             <div class="media-body text-left">
-                <h4 class="media-headiang">80台入网</h4>
+                <h4 style="font-size: 16px;" class="media-headiang">{{ $control }}台入网</h4>
             </div>
         </div>
     </div>
@@ -24,7 +24,7 @@
             <i class="fa fa-lg fa-play-circle-o" style="color: #ff0363" aria-hidden="true"></i>
         </div>
         <div class="media-body text-right">
-            <h4 class="media-headiang"><span style="color: 009bff;">12 </span>台在使用</h4>
+            <h4 class="media-headiang"><span style="color: 009bff;">{{ $using }} </span>台在使用</h4>
         </div>
     </div>
     <div class="media">
@@ -32,7 +32,7 @@
             <i class="fa fa-lg fa-stop-circle-o" style="color: #00d686" aria-hidden="true"></i>
         </div>
         <div class="media-body text-right">
-            <h4 class="media-headiang"><span style="color: 009bff;">66 </span>台待机中</h4>
+            <h4 class="media-headiang"><span style="color: 009bff;">{{ $wait }} </span>台待机中</h4>
         </div>
     </div>
     <div class="media">
@@ -40,7 +40,7 @@
             <i class="fa fa-lg fa-times-circle-o" style="color: #cccccc" aria-hidden="true"></i>
         </div>
         <div class="media-body text-right">
-            <h4 class="media-headiang"><span style="color: 009bff;">3 </span>台出故障</h4>
+            <h4 class="media-headiang"><span style="color: 009bff;">{{ $down }} </span>台出故障</h4>
         </div>
     </div>
 <div>
@@ -88,7 +88,7 @@ var g = svg
     .attr("class", "arc");
 
 g.append("path")
-    .attr("d", arc.endAngle((2 * Math.PI) * 0.7))
+    .attr("d", arc.endAngle((2 * Math.PI) * {{ $rate }}))
     .style("fill", 'url(#bala)');
 
 function type(d) {

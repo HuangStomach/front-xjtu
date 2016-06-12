@@ -1,7 +1,7 @@
 <div class="text-center" id="labStatus" style="position: relative;">
 </div>
 <div class="center-block">
-    <p>共100个总课题数，其中有58个课题，在这里进行了203次测试。</p>
+    <p>共{{ $project }}个总课题数，其中有{{ $lab }}个课题，在这里进行了{{ $test }}次测试。</p>
 <div>
 
 <script>
@@ -23,7 +23,7 @@ var svg = d3.select("#labStatus")
 var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-var json = $.parseJSON('[{"name":"测试数","value":203}, {"name":"总课题数","value":100}, {"name":"课题组","value":58}]');
+var json = $.parseJSON('[{"name":"测试数","value":{{ $test }}}, {"name":"总课题数","value": {{ $project }}}, {"name":"课题组","value": {{ $lab }}}]');
 
 var bColor = ['rgb(16,251,235)','rgb(255,73,233)','rgb(23,206,250)'];
 var eColor = ['rgb(0,182,255)','rgb(255,32,95)','rgb(18,33,244)'];
@@ -53,10 +53,20 @@ $.each(json, function(index, item) {
         })
         .attr("y", rect.attr("y"))
         .attr("transform", function () {
-            var length = item.value.toString().length
+            var length = item.value.toString().length;
+            if (rect.attr("width") < 45) {
+                return "translate(5,18)";
+            }
             return "translate(-" + length * 4 + ",18)"
         })
-        .style("fill", "#FFFFFF")
+        .style("fill", function () {
+            if (rect.attr("width") < 45) {
+                return "#000000";
+            }
+            else {
+                return "#FFFFFF"
+            }
+        })
         .text(item.value);
 
     var linear = svg.append("defs")

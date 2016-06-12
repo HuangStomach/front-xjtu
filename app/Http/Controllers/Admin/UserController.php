@@ -13,7 +13,7 @@ class UserController extends Controller
     function add () {
         return view('user/user', [
             'title' => '添加用户',
-            'action' => '/user/add',
+            'action' => 'user/add',
             'active' => 'user',
         ]);
     }
@@ -44,7 +44,7 @@ class UserController extends Controller
         return view ('user/user', [
             'user' => $user,
             'title' => '修改用户',
-            'action' => '/user/update',
+            'action' => 'user/update',
             'active' => 'user',
         ]);
     }
