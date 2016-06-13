@@ -71,7 +71,6 @@ class HomeController extends Controller
     public function ranking() {
         $reservs = self::getRpc()->execute('xjtu/reservRank', [1]);
         $uses = self::getRpc()->execute('xjtu/useRank', [1]);
-        error_log(print_r($uses, true));
         return view('home/ranking', [
             'reservs' => $reservs,
             'uses' => $uses,
@@ -79,7 +78,10 @@ class HomeController extends Controller
     }
     
     public function newReserve() {
-        return view('home/newReserve');
+        $users= self::getRpc()->execute('eq_reserv/getNewUsers', [4]);
+        return view('home/newReserve', [
+            'users' => $users,
+        ]);
     }
 
 }
