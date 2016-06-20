@@ -13,7 +13,7 @@ use App\Http\Controllers\Controller;
 
 class IndexController extends Controller
 {
-    function user () {
+    public function user () {
         $users = User::all();
         return view('admin/user', [
             'active' => 'user',
@@ -21,7 +21,7 @@ class IndexController extends Controller
         ]);
     }
 
-    function image () {
+    public function image () {
         $images = Image::all();
         return view('admin/image', [
             'active' => 'image',

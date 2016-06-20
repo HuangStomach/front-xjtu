@@ -21,26 +21,26 @@
 <div class="center-block" style="width: 125px;">
     <div class="media">
         <div class="media-left media-middle">
-            <i class="fa fa-lg fa-play-circle-o" style="color: #ff0363" aria-hidden="true"></i>
+            <i class="fa fa-lg fa-play-circle-o" style="font-weight:normal;color: #ff0363" aria-hidden="true"></i>
         </div>
         <div class="media-body text-right">
-            <h4 class="media-headiang"><span style="color: 009bff;">{{ $using }} </span>台在使用</h4>
+            <h4 class="media-headiang" style="font-weight:normal;"><span style="font-weight:normal;color: 009bff;">{{ $using }} </span>台在使用</h4>
         </div>
     </div>
     <div class="media">
         <div class="media-left media-middle">
-            <i class="fa fa-lg fa-stop-circle-o" style="color: #00d686" aria-hidden="true"></i>
+            <i class="fa fa-lg fa-stop-circle-o" style="font-weight:normal;color: #00d686" aria-hidden="true"></i>
         </div>
         <div class="media-body text-right">
-            <h4 class="media-headiang"><span style="color: 009bff;">{{ $wait }} </span>台待机中</h4>
+            <h4 class="media-headiang" style="font-weight:normal;"><span style="font-weight:normal;color: 009bff;">{{ $wait }} </span>台待机中</h4>
         </div>
     </div>
     <div class="media">
         <div class="media-left media-middle">
-            <i class="fa fa-lg fa-times-circle-o" style="color: #cccccc" aria-hidden="true"></i>
+            <i class="fa fa-lg fa-times-circle-o" style="font-weight:normal;color: #cccccc" aria-hidden="true"></i>
         </div>
         <div class="media-body text-right">
-            <h4 class="media-headiang"><span style="color: 009bff;">{{ $down }} </span>台出故障</h4>
+            <h4 class="media-headiang" style="font-weight:normal;"><span style="font-weight:normal;color: 009bff;">{{ $down }} </span>台出故障</h4>
         </div>
     </div>
 <div>

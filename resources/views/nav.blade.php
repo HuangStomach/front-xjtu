@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container" style="width: 1000px;">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#" style="pointer-events: none;">
             <img alt="Brand" src="img/icon.png" style="height: 40px;width: 40px;display: inline;margin-top: -5px;">
                 大型仪器设备物联共享系统
             </a>
@@ -15,4 +15,7 @@
             @endforeach
         </ul>
     </div>
+</nav>
+<nav style="position: fixed; top: 60%; right: 0; width: 100px; height: 100px;">
+    <img src="img/qrcode.jpg" alt="..." class="img-thumbnail">
 </nav>

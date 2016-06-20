@@ -69,6 +69,7 @@ body {
 }
 
 .panel-login {
+    height: 264px;
     position: absolute;
     right: 15px;
     top: 50%;

@@ -23,7 +23,7 @@ var svg = d3.select("#labStatus")
 var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-var json = $.parseJSON('[{"name":"测试数","value":{{ $test }}}, {"name":"总课题数","value": {{ $project }}}, {"name":"课题组","value": {{ $lab }}}]');
+var json = $.parseJSON('[{"name":"测试次数","value":{{ $test }}}, {"name":"总课题数","value": {{ $project }}}, {"name":"课题数","value": {{ $lab }}}]');
 
 var bColor = ['rgb(16,251,235)','rgb(255,73,233)','rgb(23,206,250)'];
 var eColor = ['rgb(0,182,255)','rgb(255,32,95)','rgb(18,33,244)'];

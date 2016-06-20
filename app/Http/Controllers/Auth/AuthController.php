@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
+
 use Auth;
 use App\User;
 use Validator;
+use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -24,25 +27,19 @@ class AuthController extends Controller
         return view('auth/login');
     }
 
-    public function postLogin() {
-        
+    public function postLogin(Request $request) {
+        $validator = $this->validate($request, [
+            'token' => 'required',
+            'password' => 'required',
+        ]);
+
+        if (Auth::attempt(['token' => $request->get('token'), 'password' => $request->get('password')])) {
+            return redirect()->intended('admin');
+        }
     }
 
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
-        ]);
+    public function getLogout () {
+        Auth::logout();
     }
 
-    protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
-    }
 }
