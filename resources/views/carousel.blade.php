@@ -40,12 +40,21 @@
                                     <input type="hidden" name="token_backend" value="database">
                                 </div>
                             </div>
-                            <div class="form-group" style="margin-top: 15px;">
+                            <div class="form-group" style="margin-top: 0;">
                                 <div class="col-md-10 col-md-offset-1">
                                     <input name="password" type="password" class="form-control" placeholder="密码">
                                 </div>
                             </div>
-                            <button type="submit" name="submit" class="btn btn-radius btn-raised btn-info">登陆</button>
+                            <div class="row" style="margin-top: 0;">
+                                <div class="col-md-5 col-md-offset-1 text-left">
+                                    <a class="btn btn-link" href="http://equip.xjtu.edu.cn/lims/!labs/signup/lab" style="padding: 0;">注册新用户</a>
+                                </div>
+                                <div class="col-md-5 text-right" >
+                                    <a class="btn btn-link" href="http://equip.xjtu.edu.cn/lims/recovery" style="padding: 0;">忘记密码</a>
+                                </div>
+                            </div>
+                            <input type="submit" name="submit" class="btn btn-radius btn-raised btn-info" value="登陆" />
+                            <br />
                         </form>
                     </div>
                 </div>

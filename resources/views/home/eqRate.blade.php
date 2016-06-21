@@ -19,7 +19,7 @@
     </div>
 </div>
 <div class="center-block" style="width: 180px;">
-    <p>共有102台设备，其中60台正在使用中。</p>
+    <p>共有{{ $total }}台设备，其中{{ $using }}台正在使用中。</p>
 <div>
 
 <script>

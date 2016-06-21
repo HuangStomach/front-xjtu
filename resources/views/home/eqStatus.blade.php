@@ -32,7 +32,7 @@
             <i class="fa fa-lg fa-stop-circle-o" style="font-weight:normal;color: #00d686" aria-hidden="true"></i>
         </div>
         <div class="media-body text-right">
-            <h4 class="media-headiang" style="font-weight:normal;"><span style="font-weight:normal;color: 009bff;">{{ $wait }} </span>台待机中</h4>
+            <h4 class="media-headiang" style="font-weight:normal;"><span style="font-weight:normal;color: 009bff;">{{ $wait - $down }} </span>台待机中</h4>
         </div>
     </div>
     <div class="media">
