@@ -2,12 +2,21 @@
     @foreach ($users as $user)
     <div class="list-group-item" style="padding: 0px;margin-bottom: 20px;">
         <div class="row-picture">
-            <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon" style="width:45px;height:45px;">
+            <img class="circle" src="{{ $user['icon'] }}" alt="icon" style="width:45px;height:45px;">
         </div>
         <div class="row-content" style="min-height: 55px;width: 205px;">
             <p class="list-group-item-heading" style="font-size: 16px">
                 {{ $user['name'] }}
-                <span class="pull-right">{{ $user['equipment'] }}</span>
+                <span class="pull-right"> 
+                <?php
+                if (mb_strlen($user['equipment']) > 8) {
+                    echo mb_substr($user['equipment'], 0, 8) . '...';
+                }
+                else {
+                    echo $user['equipment'];
+                }
+                ?>
+                </span>
             </p>                
             <small>
                 <?php

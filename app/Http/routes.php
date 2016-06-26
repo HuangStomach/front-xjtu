@@ -26,15 +26,15 @@ Route::group(['prefix' => 'ajax', 'namespace' => 'Ajax'], function () {
 
     Route::get('image/delete/{id}', [
         'middleware' => 'auth',
-        'use' => 'ImageController@delete'
+        'uses' => 'ImageController@delete'
     ]);
     Route::get('user/delete/{id}', [
         'middleware' => 'auth',
-        'use' => 'UserController@delete'
+        'uses' => 'UserController@delete'
     ]);
     Route::get('link/delete/{id}', [
         'middleware' => 'auth', 
-        'use' => 'LinkController@delete'
+        'uses' => 'LinkController@delete'
     ]);
 });
 
@@ -63,4 +63,6 @@ Route::group(['prefix' => 'link', 'namespace' => 'Admin', 'middleware' => 'auth'
     Route::get('add', 'LinkController@add');
     Route::post('add', 'LinkController@postAdd');
     Route::post('delete', 'LinkController@postDelete');
+    Route::get('update/{id}', 'LinkController@update');
+    Route::post('update', 'LinkController@postUpdate');
 });

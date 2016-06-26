@@ -27,8 +27,8 @@ class HomeController extends Controller
     public function index()
     {
         $images = Image::all();
-        $navs = Link::where('type', 1)->get();
-        $links = Link::where('type', 2)->get();
+        $navs = Link::where('type', 1)->orderBy('weight')->get();
+        $links = Link::where('type', 2)->orderBy('weight')->get();
         return view('home', [
             'navs' => $navs,
             'links' => $links,

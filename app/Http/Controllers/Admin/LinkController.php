@@ -30,6 +30,7 @@ class LinkController extends Controller
         $link->title = $request->get('title');
         $link->href = $request->get('href');
         $link->type = $request->get('type');
+        $link->weight = (int)$request->get('weight') ? : 0;
 
         if ($link->save()) {
             if ($request->hasFile('icon')) {
@@ -40,6 +41,51 @@ class LinkController extends Controller
                     $path,
                     file_get_contents($file->getRealPath())
                 );
+                $link->icon = $path;
+                $link->save();
+            }
+            return redirect('admin/link')->with('message', '保存成功');
+        }
+        else {
+            return redirect('admin/link')->with('message', '保存失败，请联系管理员');
+        }
+    }
+
+    public function update ($id) {
+        $link = Link::find($id);
+        return view('link/link', [
+            'link' => $link,
+            'title' => '修改连接',
+            'action' => 'link/update',
+            'active' => 'link',
+        ]);
+    }
+
+    public function postUpdate (Request $request) {
+        $validator = $this->validate($request, [
+            'title' => 'required',
+            'href' => 'required',
+            'icon' => 'mimes:jpg,jpeg,bmp,png,gif',
+        ]);
+
+        $link = Link::find($request->get('id'));
+        $link->title = $request->get('title');
+        $link->href = $request->get('href');
+        $link->type = $request->get('type');
+        $link->weight = (int)$request->get('weight') ? : 0;
+
+        $icon = $link->icon; 
+
+        if ($link->save()) {
+            if ($request->hasFile('icon')) {
+                $file = $request->file('icon');
+                $extension = $file->getClientOriginalExtension();
+                $path = 'icon/' . time() . '.' . $extension;
+                Storage::put(
+                    $path,
+                    file_get_contents($file->getRealPath())
+                );
+                Storage::delete($icon);
                 $link->icon = $path;
                 $link->save();
             }

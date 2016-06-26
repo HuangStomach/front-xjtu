@@ -57,7 +57,7 @@ class UserController extends Controller
             'confirm' => 'required|same:password'
         ]);
        
-        $user = User::find();
+        $user = User::find($request->get('id'));
         $user->token = $request->get('token');
         $user->name = $request->get('name');
         $user->password = bcrypt($request->get('password'));
