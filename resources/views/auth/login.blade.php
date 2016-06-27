@@ -8,6 +8,12 @@
                 <h4 class="modal-title text-center text-primary">登陆</h4>
             </div>
             <div class="modal-body">
+                @if (session('message'))
+                <div class="alert alert-dismissible alert-danger">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    {{ session('message') }}
+                </div>
+                @endif
                 <form class="form-horizontal" method="post">
                     {!! csrf_field() !!}
                     <div class="form-group">

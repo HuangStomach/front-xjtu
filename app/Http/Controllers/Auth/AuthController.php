@@ -36,6 +36,9 @@ class AuthController extends Controller
         if (Auth::attempt(['token' => $request->get('token'), 'password' => $request->get('password')])) {
             return redirect()->intended('admin');
         }
+        else {
+            return redirect('login')->with('message', '用户名或密码错误');
+        }
     }
 
     public function getLogout () {
