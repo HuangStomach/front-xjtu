@@ -1,4 +1,4 @@
-<title>西安交通大学</title>
+<title>西安交通大学大型仪器设备物联共享系统</title>
 <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
 <link rel="stylesheet" href="{{ URL::asset('css/font-awesome.min.css') }}"> 
 <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-material-design.css') }}"> 

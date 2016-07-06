@@ -3,7 +3,7 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="#" style="pointer-events: none;">
             <img alt="Brand" src="img/icon-header.png" style="height: 40px;width: 40px;display: inline;margin-top: -5px;">
-                大型仪器设备物联共享系统
+                西安交通大学大型仪器设备物联共享系统
             </a>
         </div>
         <ul class="nav navbar-nav navbar-right">

@@ -1,10 +1,10 @@
 <div>
     <ul style="margin-bottom: 30px;"class="nav nav-tabs" role="tablist">
         <li role="presentation" class="active">
-            <a href="#reserv" aria-controls="reserv" role="tab" data-toggle="tab" style="padding-top: 0px;margin-right: 35px;font-size:16px;">仪器预约排行</a>
+            <a href="#reserv" class="pie-title" aria-controls="reserv" role="tab" data-toggle="tab" style="padding-top: 0px;margin-right: 35px;font-size:16px;">仪器预约排行</a>
         </li>
         <li role="presentation">
-            <a href="#use" aria-controls="use" role="tab" data-toggle="tab" style="padding-top: 0px;margin-left: 35px;font-size: 16px;">用户使用排行</a>
+            <a href="#use" class="pie-title" aria-controls="use" role="tab" data-toggle="tab" style="padding-top: 0px;margin-left: 35px;font-size: 16px;">用户使用排行</a>
         </li>
     </ul>
     <div class="tab-content">
