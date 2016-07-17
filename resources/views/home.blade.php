@@ -36,15 +36,16 @@
         <div class="col-md-4">
             <div class="panel panel-default">
 				<div class="panel-body" style="height:370px;">
-                    <p class="pie-title">仪器开机率</p>
-                    <div data-get="home/eqRate"></div>
+                    <p class="pie-title">仪器预约排行</p>
+                    <div data-get="home/reservRank"></div>
 				</div>
 			</div>
         </div>
         <div class="col-md-4">
             <div class="panel panel-default">
                 <div class="panel-body" style="height:370px;">
-                    <div data-get="home/ranking"></div>
+                    <p class="pie-title">用户使用排行</p>
+                    <div data-get="home/useRank"></div>
 				</div>
 			</div>
         </div>

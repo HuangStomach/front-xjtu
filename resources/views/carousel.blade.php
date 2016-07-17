@@ -13,7 +13,7 @@
             @foreach ($images as $index => $image)
                 <div class="item {{ $index == 0 ? 'active' : ''}}">
                     <div class="text-center" style="width: 740px;">
-                       <img src="{{ $image->path }}" style="height: 100%;">
+                       <img src="{{ $image->path }}" style="height: 380px; margin-top: 60px;">
                     </div>
                 </div>
             @endforeach

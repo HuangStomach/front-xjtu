@@ -18,10 +18,10 @@ Route::get('/logout', 'Auth\AuthController@getLogout');
 
 Route::group(['prefix' => 'ajax', 'namespace' => 'Ajax'], function () {
     Route::get('home/eqStatus', 'HomeController@eqStatus');
-    Route::get('home/eqRate', 'HomeController@eqRate');
     Route::get('home/labStatus', 'HomeController@labStatus');
     Route::get('home/userStatus', 'HomeController@userStatus');
-    Route::get('home/ranking', 'HomeController@ranking');
+    Route::get('home/reservRank', 'HomeController@reservRank');
+    Route::get('home/useRank', 'HomeController@useRank');
     Route::get('home/newReserve', 'HomeController@newReserve');
 
     Route::get('image/delete/{id}', [

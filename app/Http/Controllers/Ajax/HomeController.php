@@ -68,13 +68,20 @@ class HomeController extends Controller
         ]);
     }
 
-    public function ranking() {
+    public function reservRank() {
         $reservs = self::getRpc()->execute('xjtu/reservRank', [1]);
-        $uses = self::getRpc()->execute('xjtu/useRank', [1]);
-        return view('home/ranking', [
+        return view('home/reservRank', [
             'reservs' => $reservs,
+        ]);
+
+    }
+
+    public function useRank() {
+        $uses = self::getRpc()->execute('xjtu/useRank', [1]);
+        return view('home/useRank', [
             'uses' => $uses,
         ]);
+
     }
     
     public function newReserve() {

@@ -1,4 +1,5 @@
 body {
+    font-family: "宋体";
     padding-top: 50px;
     background-color: #EEEEEE;
 }
@@ -56,7 +57,7 @@ body {
 }
 
 .carousel-inner > .item {
-    height: 360px;
+    height: 500px;
 }
 
 .carousel-indicators li {
