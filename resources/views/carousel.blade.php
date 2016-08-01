@@ -22,8 +22,12 @@
         <div class="panel panel-default panel-login">
             <div class="panel-body">
                 <ul class="nav nav-tabs" style="margin-bottom: 15px;">
-                    <li class="active"><a style="margin-right: 20px; font-size: 15px;" href="#home" data-toggle="tab">校内用户登陆</a></li>
-                    <li><a style="margin-left: 20px; font-size: 15px;" href="#profile" data-toggle="tab">校外用户登陆</a></li>
+                    <li class="active">
+                        <a style="margin-right: 20px; font-size: 15px;" href="#home" data-toggle="tab">校内用户登陆</a>
+                    </li>
+                    <li>
+                        <a style="margin-left: 20px; font-size: 15px;" href="#profile" data-toggle="tab">校外用户登陆</a>
+                    </li>
                 </ul>
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade text-center active in" id="home">
@@ -47,10 +51,10 @@
                             </div>
                             <div class="row" style="margin-top: 0;">
                                 <div class="col-md-5 col-md-offset-1 text-left">
-                                    <a class="btn btn-link" href="http://equip.xjtu.edu.cn/lims/!labs/signup/lab" style="padding: 0;">注册新用户</a>
+                                    <a class="btn btn-link" href="http://equip.xjtu.edu.cn/lims/!labs/signup/lab" style="color: #FFFFFF; padding: 0;">注册新用户</a>
                                 </div>
                                 <div class="col-md-5 text-right" >
-                                    <a class="btn btn-link" href="http://equip.xjtu.edu.cn/lims/recovery" style="padding: 0;">忘记密码</a>
+                                    <a class="btn btn-link" href="http://equip.xjtu.edu.cn/lims/recovery" style="color: #FFFFFF; padding: 0;">忘记密码</a>
                                 </div>
                             </div>
                             <input type="submit" name="submit" class="btn btn-radius btn-raised btn-info" value="登陆" />
