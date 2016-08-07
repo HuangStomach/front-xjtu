@@ -47,7 +47,7 @@
 
 <script>
 var width = 200,
-    height = 220,
+    height = 210,
     radius = Math.min(width, height) / 2;
 
 var arc = d3.svg.arc()
